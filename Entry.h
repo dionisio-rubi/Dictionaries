@@ -6,15 +6,15 @@ class Entry{
     private:
         Key key;
         Value value;
-    protected:
-        void setKey(const Key& searchKey);
     public:
         Entry();
         Entry(const Key& key, const Value& value);
+        void setKey(const Key& searchKey);
+        void setValue(const Value& newValue);
         Value getValue() const;
         Key getKey() const;
-        bool operator==(const Entry<Key, Value>& entry) const;
-        bool operator>(const Entry<Key, Value>& entry) const;
+        bool operator==(const Entry<Key, Value>& entry) const; //checks if entries are equal
+        bool operator>(const Entry<Key, Value>& entry) const; // checks if entry is > other entry
 };
 
 #include "Entry.cpp"
