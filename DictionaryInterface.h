@@ -11,7 +11,6 @@ class DictionaryInterface{
     virtual bool clear() = 0;
     virtual Value getValue(const Key& searchKey) const = 0;
     virtual bool contains(const Key& searchKey) const = 0;
-    virtual void traverse(void visit(Value&)) const = 0;
     virtual ~DictionaryInterface(){ }
     
 };
